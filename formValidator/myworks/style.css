@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Nanum+Gothic&family=Noto+Sans+KR:wght@400;900&family=Open+Sans&family=Poppins:ital,wght@0,100;0,400;1,300;1,400&family=Roboto+Slab&display=swap");
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9fafb;
+  font-family: "Open Sans", sans-serif;
+}
+
+#form {
+  min-height: 100vh;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 10px 10px 10px 10px rgba(0, 10, 10, 0.5);
+}
+
+.form-control {
+  margin: 10px;
+  padding: 10px;
+}
+
+h2 {
+  padding: 20px;
+  margin: 100px;
+}
+
+.form-control label {
+  display: block;
+  text-align: left;
+  width: 50%;
+}
+
+.form-control input {
+  display: block;
+  margin-top: 10px;
+  width: 80%;
+  /* height는 %가 왜 안되는가요? */
+  height: 30px;
+}
+
+.form-control input:hover {
+  background-color: beige;
+}
+
+.form-control small {
+  display: block;
+  width: 50%;
+  visibility: hidden;
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.fail input {
+  border-color: var(--fail-color);
+}
+
+.form-control.success small {
+  visibility: visible;
+}
+
+.form-control.fail small {
+  visibility: visible;
+}
+
+#form button {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+}
