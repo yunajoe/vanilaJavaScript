@@ -12,11 +12,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <!-- 토글메뉴 -->
+    <!-- nav태그가 토글버튼을 누르면은 나오는거 -->
     <nav>
       <div class="logo">
         <img
@@ -31,16 +30,16 @@
         <li><a href="#">Contact me</a></li>
       </ul>
     </nav>
-    <header>
-      <button class="toggle-button">
+    <header class="header">
+      <button class="header__toggle__button">
         <i class="fa fa-bars fa-2x"></i>
       </button>
-      <h1>My Landing Page</h1>
-      <p>How such a beautiful day</p>
-      <button class="sign-up">Sign up</button>
+      <h1 class="header__title">My Landing Page</h1>
+      <p class="header__subtitle">How such a beautiful day</p>
+      <button class="modal__button">Sign up</button>
     </header>
-    <main>
-      <div class="main-first">
+    <main class="main">
+      <div class="main__section-one">
         <h2>What is this landing page about?</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iure
@@ -54,7 +53,7 @@
           saepe!
         </p>
       </div>
-      <div class="main-second">
+      <div class="main__section-two">
         <h2>Tell me more</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat
@@ -64,7 +63,7 @@
           deserunt nemo neque, obcaecati exercitationem sit. Earum.
         </p>
       </div>
-      <div class="main-third">
+      <div class="main__section-three">
         <h2>Benefits</h2>
         <ul>
           <li>Lifetime Access</li>
@@ -85,44 +84,46 @@
     </main>
     <!-- 모달 form -->
     ----------모달영역--------
-    <div class="modal-container">
-      <div class="modal-header">
-        <p>Sign up</p>
-        <!-- 엑스표시 -->
-        <button class="modal-close"><i class="fa-solid fa-x"></i></button>
-      </div>
-      <div class="modal-content">
-        <p>Register with us to get offers, support and more</p>
-        <form class="modal-form">
-          <label for="name">Name</label
-          ><input
-            id="name"
-            type="text"
-            placeholder="Enter Name"
-            class="form-input"
-          />
-          <label for="email">Email</label
-          ><input
-            id="email"
-            type="email"
-            placeholder="Enter Email"
-            class="form-input"
-          />
-          <label for="password">Password</label
-          ><input
-            id="password"
-            type="password"
-            placeholder="Enter Password"
-            class="form-input"
-          />
-          <label for="password2">Confirm Password</label
-          ><input
-            id="password2"
-            type="password"
-            placeholder="Confirm Password"
-            class="form-input"
-          />
-        </form>
+    <div class="modal">
+      <div class="modal__container">
+        <div class="modal__header">
+          <p>Sign up</p>
+          <!-- 엑스표시 -->
+          <button class="modal-close"><i class="fa-solid fa-x"></i></button>
+        </div>
+        <div class="modal__main">
+          <p>Register with us to get offers, support and more</p>
+          <form class="modal__form">
+            <label for="name">Name</label
+            ><input
+              id="name"
+              type="text"
+              placeholder="Enter Name"
+              class="form-input"
+            />
+            <label for="email">Email</label
+            ><input
+              id="email"
+              type="email"
+              placeholder="Enter Email"
+              class="form-input"
+            />
+            <label for="password">Password</label
+            ><input
+              id="password"
+              type="password"
+              placeholder="Enter Password"
+              class="form-input"
+            />
+            <label for="password2">Confirm Password</label
+            ><input
+              id="password2"
+              type="password"
+              placeholder="Confirm Password"
+              class="form-input"
+            />
+          </form>
+        </div>
       </div>
       <button>Submit</button>
     </div>
