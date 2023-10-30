@@ -9,6 +9,29 @@
   font-size: 62.5%;
 }
 
+/* 토클  */
+/* body안에 요소가 변환하면은 0.3초동안 서서히 그 변화가 일어난다 */
+body {
+  transition: transform 0.3s ease;
+}
+nav {
+  background-color: var(--primary-color);
+  border-right: 2px solid rgba(200, 200, 200, 0.1);
+  color: #fff;
+  width: 400px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* -100%: This value specifies how far the element should be translated along the X-axis. A value of -100% means that the element will be moved to the left by 100% of its own width, effectively shifting it completely out of view to the left. */
+  transform: translateX(-100%);
+}
+
+/* 속성값 */
+
+body[show-nav] {
+  transform: translateX(400px);
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -27,7 +50,6 @@
 }
 
 .header__subtitle {
-  border: 5px solid green;
   margin-bottom: 2rem;
 }
 
