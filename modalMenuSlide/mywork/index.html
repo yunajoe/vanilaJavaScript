@@ -84,48 +84,59 @@
     </main>
     <!-- 모달 form -->
     ----------모달영역--------
-    <div class="modal">
-      <div class="modal__container">
+    <div class="modal__container">
+      <div class="modal">
         <div class="modal__header">
           <p>Sign up</p>
-          <!-- 엑스표시 -->
           <button class="modal-close"><i class="fa-solid fa-x"></i></button>
+          <!-- 엑스표시 -->
         </div>
         <div class="modal__main">
-          <p>Register with us to get offers, support and more</p>
+          <p class="modal__title">
+            Register with us to get offers, support and more
+          </p>
           <form class="modal__form">
-            <label for="name">Name</label
-            ><input
-              id="name"
-              type="text"
-              placeholder="Enter Name"
-              class="form-input"
-            />
-            <label for="email">Email</label
-            ><input
-              id="email"
-              type="email"
-              placeholder="Enter Email"
-              class="form-input"
-            />
-            <label for="password">Password</label
-            ><input
-              id="password"
-              type="password"
-              placeholder="Enter Password"
-              class="form-input"
-            />
-            <label for="password2">Confirm Password</label
-            ><input
-              id="password2"
-              type="password"
-              placeholder="Confirm Password"
-              class="form-input"
-            />
+            <div>
+              <label for="name" class="form-label">Name</label
+              ><input
+                id="name"
+                type="text"
+                placeholder="Enter Name"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <label for="email" class="form-label">Email</label
+              ><input
+                id="email"
+                type="email"
+                placeholder="Enter Email"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <label for="password" class="form-label">Password</label
+              ><input
+                id="password"
+                type="password"
+                placeholder="Enter Password"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <label for="password2" class="form-label">Confirm Password</label
+              ><input
+                id="password2"
+                type="password"
+                placeholder="Confirm Password"
+                class="form-input"
+              />
+            </div>
+            <input type="submit" value="submit" class="form__submit" />
           </form>
         </div>
       </div>
-      <button>Submit</button>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
