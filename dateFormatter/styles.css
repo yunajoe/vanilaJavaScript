@@ -1,0 +1,70 @@
+@import url("./global.css");
+
+body {
+  color: var(--white);
+  background-color: var(--dark-grey);
+}
+
+/* title-wrapper */
+
+main {
+  margin-top: 10rem;
+}
+.title-wrapper {
+  /* border: 5px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.8rem;
+}
+
+.date-title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.date-svg {
+  width: 3rem;
+  height: 3rem;
+}
+/* divider */
+.divider {
+  background-color: var(--yellow);
+  height: 1.2rem;
+  width: 15rem;
+  margin: 1.2rem auto 0;
+}
+
+/* dropdown-wrapper */
+.dropdown-wrapper {
+  margin: 1rem auto;
+  width: 50%;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  min-height: 1rem;
+  background-color: blue;
+}
+
+#dropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown-icon {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.5rem;
+}
+
+.selected-date-format {
+  margin: 5rem auto;
+  font-size: 2rem;
+
+  text-align: center;
+}
