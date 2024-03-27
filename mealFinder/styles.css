@@ -1,0 +1,168 @@
+@import url("./global.css");
+
+body {
+  background-color: var(--background);
+  color: white;
+}
+
+main {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+/* search area */
+.search-wrapper {
+  margin-bottom: 2rem;
+}
+
+/* 서치 인풋! */
+
+input[type="text"] {
+  width: 30rem;
+  padding: 0.8rem;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* 서치 버튼 */
+.search-button {
+  /* border: 5px solid green; */
+  cursor: pointer;
+  padding: 0.8rem;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* shuffle-button */
+.shuffle-button {
+  padding: 0.8rem;
+  border-radius: 4px;
+}
+
+/* keyword title */
+
+.search-keyword {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* output area */
+.output-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* 검색후, 나타나는  */
+/* meal*/
+
+.meal {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border: 5px solid var(--white);
+}
+
+/* meal-info */
+.meal-info {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* The element is fully transparent (that is, invisible).*/
+  opacity: 0;
+}
+
+.meal-info:hover {
+  transition: background-color 0.5s;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.2s ease-in;
+  /* hover할때만 opacity를 준다. 즉, 요소를 보이게 한다! */
+  opacity: 10;
+}
+.meal-info h1 {
+  margin: 7rem auto;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* random-meal */
+
+.random-meal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.random-meal h1 {
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+
+.random-meal h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.random-meal img {
+  width: 300px;
+  margin: 15px;
+  border: 4px #fff solid;
+  border-radius: 2px;
+}
+
+.display-none {
+  display: none;
+}
+.random-meal-category {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  border: 2px #e09850 dashed;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.random-meal-info {
+  /* display: flex;
+  flex-direction: column; */
+  text-align: center;
+}
+.random-meal-instructions {
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  background-color: #fff;
+  display: inline-block;
+  color: #2d2013;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+}
