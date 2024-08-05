@@ -64,19 +64,20 @@ h1 {
   font-size: 3rem;
 }
 
-main {
-  text-align: center;
-  min-height: 100vh;
-  width: 500px;
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-}
-
-.container {
+#container {
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#maincontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  width: 500px;
+  margin: 0 auto;
 }
 
 #value {
@@ -84,7 +85,7 @@ main {
   font-weight: bold;
 }
 
-.btn {
+.button {
   background: transparent;
   text-transform: uppercase;
   color: var(--clr-black);

@@ -12,7 +12,7 @@ const changeColor = (number, value) => {
 };
 
 buttons.forEach((button) => {
-  let each = button.classList; // each는 DOMTOKENLIST
+  let each = button.classList;
   if (each.contains("decrease")) {
     button.addEventListener("click", function (e) {
       cnt--;
