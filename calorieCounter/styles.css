@@ -1,0 +1,99 @@
+:root {
+  --light-grey: #f5f6f7;
+  --dark-blue: #0a0a23;
+  --fcc-blue: #1b1b32;
+  --light-yellow: #fecc4c;
+  --dark-yellow: #feac32;
+  --light-pink: #ffadad;
+  --dark-red: #850000;
+  --light-green: #acd157;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  background-color: var(--fcc-blue);
+  color: var(--light-grey);
+  font-size: 18px;
+}
+
+.container {
+  width: 90%;
+  max-width: 680px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1,
+.container,
+.output {
+  margin: 20px auto;
+}
+
+label,
+legend {
+  font-weight: bold;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+}
+
+/* button */
+
+button {
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--light-yellow);
+}
+
+.clear {
+  background-color: var(--light-pink);
+  color: var(--dark-red);
+  border-color: var(--dark-red);
+}
+
+button,
+input,
+select {
+  min-height: 24px;
+}
+
+fieldset,
+label,
+button,
+select {
+  margin-bottom: 10px;
+}
+
+.output {
+  border: 2px solid var(--light-grey);
+  padding: 10px;
+  text-align: center;
+}
+
+/* 아래의 CSS들은 JS로 인해 */
+
+.hide {
+  display: none;
+}
+
+.output span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.surplus {
+  color: var(--light-green);
+}
+
+.deficit {
+  color: var(--light-pink);
+}
