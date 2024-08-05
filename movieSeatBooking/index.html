@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="movieSelect">
+      <p>Pick a movie</p>
+      <!-- select태그에 name을 붙여야만 option태그들이 보이나? -->
+      <select class="movieTitles" name="movieTitles">
+        <!-- <option> 태그와 </option> 태그 사이의 텍스트는 단지 브라우저가 드롭다운 리스트에 표시할 내용 -->
+        <!--  value 속성값은 폼을 제출할 때 서버로 보내지는 값 -->
+        <!-- value 속성이 명시되지 않는다면, 해당 값은 <option> 요소 내의 텍스트로 자동 설정 -->
+        <option value="Avengers">Avengers: Endgame($10)</option>
+        <option value="Jokers">Jokers($12)</option>
+        <option value="Toy">Toy Story4($8)</option>
+        <option value="Lion">The Lion King($9)</option>
+      </select>
+    </div>
+    <ul class="picturesOfSeats">
+      <li>
+        <div class="seat"></div>
+        <p>N/A</p>
+      </li>
+      <li>
+        <div class="seat selected"></div>
+        <p>Selected</p>
+      </li>
+      <li>
+        <div class="seat occupied"></div>
+        <p>Occupied</p>
+      </li>
+    </ul>
+    <div class="container">
+      <!-- 화면  -->
+      <div class="screen"></div>
+      <div class="row">
+        <div class="seat"><p class="text"></p></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"><p class="text"></p></div>
+        <div class="seat"><p class="text"></p></div>
+        <div class="seat"><p class="text"></p></div>
+        <div class="seat"><p class="text"></p></div>
+        <div class="seat"><p class="text"></p></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+    </div>
+    <p class="texts">
+      You have selected <span id="count">0</span> seats for a price of
+      <span id="price">0</span>
+    </p>
+    <script src="./script.js"></script>
+  </body>
+</html>
