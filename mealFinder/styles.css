@@ -142,9 +142,12 @@ img {
 }
 
 .random-meal-info {
-  /* display: flex;
-  flex-direction: column; */
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
   text-align: center;
+  font-size: 14px;
 }
 .random-meal-instructions {
   letter-spacing: 0.5px;
