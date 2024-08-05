@@ -17,7 +17,6 @@ const handleDropDownChange = () => {
     case "Day, Month, Year":
       selectedDateFormat.textContent = `${day}-${month}-${year}`;
       break;
-
     case "Year, Month, Day":
       selectedDateFormat.textContent = `${year}-${month}-${day}`;
       break;
@@ -28,7 +27,6 @@ const handleDropDownChange = () => {
     default:
       return;
   }
-  console.log(dateFormat);
 };
 
 dropDownList.addEventListener("change", handleDropDownChange);
