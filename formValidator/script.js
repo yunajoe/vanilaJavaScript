@@ -3,6 +3,7 @@ const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
+const formControls = document.querySelectorAll(".form-control");
 
 function showError(input, message) {
   const formControl = input.parentElement;
@@ -57,45 +58,33 @@ function checkPasswordMatch(input1, input2) {
   }
 }
 
-// Event Listener;
-// console.log(form);
+// reset
+function reset(username, email, password, password2) {
+  username.value = null;
+  email.value = null;
+  password.value = null;
+  password2.value = null;
+
+  formControls.forEach((node) => {
+    node.classList.remove("success");
+  });
+}
+
+// submit
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   checkRequired([username, email, password, password2]);
+
   {
     checkLength(username, 3, 5);
     checkEmail(email);
     checkPasswordMatch(password, password2);
   }
 
-  //   checkRequired(username);
-  //   checkRequired(email);
-  //   checkRequired(password);
-  //   checkRequired(password2);
+  const successElements = document.querySelectorAll(".success");
 
-  //   if (username.value === "") {
-  //     showError(username, "Username is Required");
-  //   } else {
-  //     showSuccess(username);
-  //   }
-
-  //   if (email.value === "") {
-  //     showError(email, "Email is Required");
-  //   } else if (!checkEmail(email.value)) {
-  //     showError(email, "Email is valid");
-  //   } else {
-  //     showSuccess(email);
-  //   }
-
-  //   if (password.value === "") {
-  //     showError(password, "password is Required");
-  //   } else {
-  //     showSuccess(password);
-  //   }
-
-  //   if (password2.value === "") {
-  //     showError(password2, "password2 is Required");
-  //   } else {
-  //     showSuccess(password2);
-  //   }
+  if (successElements.length === 4) {
+    alert("회원가입이 되었습니다");
+    reset(username, email, password, password2);
+  }
 });
