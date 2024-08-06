@@ -6,12 +6,11 @@ const playButton = document.querySelector("#play-button");
 const nextButton = document.querySelector("#next-button");
 const shuffleButton = document.querySelector("#shuffle-button");
 
-// player
-
 // 전역변수
 let clickedCnt = 0;
 let previousSongArr = [];
 let audioSource;
+
 // songs 선택
 const songListWrapper = document.querySelector(".playlist-songs");
 const songLists = document.querySelectorAll(".playlist-song");
@@ -259,14 +258,34 @@ function shuffleButtonFunction() {
       songListWrapper.children[(Math.random() * i) | 0]
     );
   }
+
+  const childrenNodes = songListWrapper.children;
+
+  for (let i = 0; i < childrenNodes.length; i++) {
+    if (childrenNodes[i].getAttribute("style")) {
+      childrenNodes[i].removeAttribute("style");
+    }
+  }
+
+  const svgTag = playButton.querySelector("svg");
+  svgTag.style.fill = "";
+  if (audioSource) {
+    audioSource.pause();
+  }
+
+  clickedCnt = 0;
+  previousSongArr = [];
 }
 
 // delete기능
 function deleteSongFunction(deleteIdx) {
   if (songListWrapper.children.length) {
     const removedChildNode = songListWrapper.children[deleteIdx];
-    audioSource.pause();
     songListWrapper.removeChild(removedChildNode);
+
+    if (audioSource) {
+      audioSource.pause();
+    }
   }
 
   if (songListWrapper.children.length === 0) {
