@@ -1,50 +1,96 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
+  /* 1rem을 10px으로 만듬 */
+  font-size: 62.5%;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 .container {
   display: flex;
-  padding: 20px;
-  max-width: 100%;
-  width: 800px;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 2rem;
+
+  margin-top: 1.5rem;
 }
 
-aside {
-  padding: 10px 20px;
-  width: 250px;
-  border-right: 1px solid #111;
+.button-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  width: 300px;
 }
 
-button {
-  border: 1px solid #111;
-  border-radius: 5px;
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 14px;
+.button-container button {
+  white-space: nowrap;
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
 }
 
-main {
-  /* flex-grow */
-  flex: 1;
-  padding: 20px 20px;
+.select-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
 }
 
-h2 {
-  padding-bottom: 10px;
+.menu-container {
   display: flex;
   justify-content: space-between;
-  font-weight: 300;
-  margin: 0 0 20px;
+}
+
+#sub-select {
+  width: 150px;
+  text-align: center;
+}
+/* infomation */
+.info-container {
+  display: flex;
+  height: 500px;
+  column-gap: 10rem;
+  border: 5px solid black;
+  position: relative;
+  /* overflow: auto; */
+  min-width: 500px;
+}
+
+.info-container .person {
+  font-size: 2rem;
+}
+
+.info-container .wealth {
+  font-size: 2rem;
+}
+
+.person hr {
+  margin: 0;
+  display: inline-block;
+  height: 2rem;
+  width: 4.5rem;
+  border: none;
+}
+
+/* 새롭게 append되는 정보 */
+.profile {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.money {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.cal-result {
+  font-size: 2rem;
+  align-self: flex-end;
+  border: 5px solid black;
 }
