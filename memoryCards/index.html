@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- add new Button을 클릭하는는 화면 -->
+    <div class="wrapper">
+      <div class="container">
+        <h1 class="title">
+          Memory Cards
+          <button class="add-button">
+            <i class="fa-solid fa-plus"></i>Add New Card
+          </button>
+        </h1>
+        <div class="vacant-card">
+          <p>만든카드가 없습니다</p>
+        </div>
+        <!-- card부분 -->
+        <div class="filled-card"></div>
+        <!-- navigation bar -->
+        <div class="card-navigation disappear">
+          <button class="left-button">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <span class="current-page">1</span>
+          <span>/</span>
+          <span class="total-page"></span>
+          <button class="right-button">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+        <button class="clear-button">
+          <i class="fa-solid fa-trash"></i>
+          Clear Button
+        </button>
+      </div>
+
+      <!-- add new card버튼을 클릭하면은 보이게 되는 화면 -->
+      <div class="new-card-container disappear">
+        <h1 class="new-card-title">
+          Add New Card
+          <button class="close-button">
+            <i class="fas fa-times"></i>
+          </button>
+        </h1>
+        <div class="form-group">
+          <label for="question">Question</label
+          ><textarea
+            id="question"
+            name="question"
+            placeholder="Enter Question...."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="answer" name="answer">Answer</label
+          ><textarea id="answer" placeholder="Enter Answer..."></textarea>
+        </div>
+        <button class="add-card-button disappear">
+          <i class="fas fa-plus"></i> Add Card
+        </button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
